@@ -42,7 +42,6 @@
                         'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
                         'orbit': 'orbit 22s linear infinite',
                         'orbit-reverse': 'orbit 28s linear infinite reverse',
-                        'shimmer': 'shimmer 2.5s infinite',
                     },
                     keyframes: {
                         float: {
@@ -56,9 +55,6 @@
                         orbit: {
                             '0%': { transform: 'rotate(0deg)' },
                             '100%': { transform: 'rotate(360deg)' }
-                        },
-                        shimmer: {
-                            '100%': { transform: 'translateX(100%)' }
                         }
                     }
                 }
@@ -118,11 +114,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .text-gradient-webmake {
-            background: linear-gradient(135deg, #FFFFFF 0%, #C4B5FD 50%, #8B5CF6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
 
         /* Fixed Background Canvas */
         #particleCanvas {
@@ -135,15 +126,9 @@
             z-index: 1;
         }
 
-        /* Glowing Orbit Lines */
         .orbit-ring {
             border: 1px dashed rgba(168, 85, 247, 0.25);
             border-radius: 50%;
-        }
-
-        /* Timeline Connector for Desktop */
-        .timeline-line {
-            background: linear-gradient(90deg, #8B5CF6 0%, #38BDF8 50%, #EC4899 100%);
         }
     </style>
 </head>
@@ -229,7 +214,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
-                    <!-- Hero Left Typography & Primary CTAs (40% desktop width) -->
+                    <!-- Hero Left Typography & Primary CTAs -->
                     <div class="lg:col-span-5 space-y-6 text-center lg:text-left z-20">
                         <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border-violet-500/40 text-xs font-extrabold text-violet-soft uppercase tracking-widest shadow-lg">
                             <i class="fa-solid fa-sparkles text-cyber animate-pulse"></i>
@@ -264,7 +249,7 @@
                         </div>
                     </div>
 
-                    <!-- Hero Right Visual - DOMINANT SHIBA INU ASTRONAUT MASCOT (60% desktop width) -->
+                    <!-- Hero Right Visual - DOMINANT SHIBA INU ASTRONAUT MASCOT -->
                     <div class="lg:col-span-7 relative flex justify-center items-center mt-6 lg:mt-0 z-10">
                         <div class="relative w-full max-w-2xl aspect-square flex items-center justify-center">
 
@@ -274,7 +259,6 @@
                             <!-- Glowing Planet / Moon Background -->
                             <div class="absolute w-[80%] h-[80%] rounded-full bg-gradient-to-b from-violet-950/80 via-space-card/90 to-space-deep border border-violet-500/30 shadow-[0_0_80px_rgba(139,92,246,0.4)] flex items-center justify-center overflow-hidden">
                                 <div class="w-full h-full opacity-20 bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                                <!-- Crater accent -->
                                 <div class="absolute top-[20%] left-[25%] w-24 h-24 rounded-full bg-violet-900/40 border border-violet-500/20 shadow-inner"></div>
                                 <div class="absolute bottom-[30%] right-[20%] w-16 h-16 rounded-full bg-violet-900/40 border border-violet-500/20 shadow-inner"></div>
                             </div>
@@ -291,62 +275,45 @@
                                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span> SOLANA MEME
                             </div>
 
-                            <!-- HUGE 3D SHIBA INU ASTRONAUT MASCOT SVG (DOMINANT FEATURE) -->
+                            <!-- HUGE 3D SHIBA INU ASTRONAUT MASCOT SVG -->
                             <div class="relative z-20 w-full h-full flex items-center justify-center animate-float">
                                 <svg class="w-[90%] h-[90%] sm:w-[95%] sm:h-[95%] filter drop-shadow-[0_20px_50px_rgba(139,92,246,0.7)]" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Atmospheric Radial Glow -->
                                     <circle cx="120" cy="115" r="95" fill="url(#heroMascotGlow)" opacity="0.85"/>
                                     
-                                    <!-- Detailed 3D Spacesuit Shoulder & Chest Unit -->
                                     <path d="M40 220 C40 170, 75 145, 120 145 C165 145, 200 170, 200 220 L215 240 L25 240 Z" fill="url(#suitBodyGrad)" stroke="#8B5CF6" stroke-width="2"/>
-                                    <!-- Dark Violet Suit Trim Lines -->
                                     <path d="M65 170 C75 160, 165 160, 175 170" stroke="#A855F7" stroke-width="4" stroke-linecap="round"/>
                                     
-                                    <!-- Tech Chest Plate -->
                                     <path d="M90 160 H150 V205 H90 Z" fill="#0D071E" rx="8" stroke="#38BDF8" stroke-width="2.5"/>
-                                    <!-- Glowing LEDs -->
                                     <circle cx="105" cy="180" r="5" fill="#38BDF8" class="animate-pulse"/>
                                     <circle cx="120" cy="180" r="5" fill="#A855F7" class="animate-pulse"/>
                                     <circle cx="135" cy="180" r="5" fill="#10B981" class="animate-pulse"/>
                                     
-                                    <!-- WEBMAKE Crest Badge on Chest -->
                                     <path d="M110 196 L115 204 L120 199 L125 204 L130 196" stroke="#C4B5FD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 
-                                    <!-- Shiba Inu Head Base (Rich Orange-Gold) -->
                                     <circle cx="120" cy="105" r="58" fill="url(#shibaFurGrad)"/>
-                                    <!-- White Fur Muzzle -->
                                     <ellipse cx="120" cy="120" rx="30" ry="20" fill="#FFF8F0"/>
                                     
-                                    <!-- Shiba Pointy Ears -->
                                     <path d="M68 75 L82 32 L104 62 Z" fill="#D97706"/>
                                     <path d="M74 72 L84 42 L98 62 Z" fill="#FDE68A"/>
                                     <path d="M172 75 L158 32 L136 62 Z" fill="#D97706"/>
                                     <path d="M166 72 L156 42 L142 62 Z" fill="#FDE68A"/>
 
-                                    <!-- Pixelated Sunglasses (Meme Element) -->
                                     <path d="M82 85 H158 V105 H82 Z" fill="#090713" rx="3"/>
-                                    <!-- Pixel Glare Elements -->
                                     <rect x="86" y="88" width="6" height="6" fill="#FFFFFF"/>
                                     <rect x="94" y="94" width="6" height="6" fill="#FFFFFF"/>
                                     <rect x="126" y="88" width="6" height="6" fill="#FFFFFF"/>
                                     <rect x="134" y="94" width="6" height="6" fill="#FFFFFF"/>
 
-                                    <!-- Nose & Confident Smile -->
                                     <polygon points="113,112 127,112 120,120" fill="#0F172A"/>
                                     <path d="M112 124 Q120 130 128 124" stroke="#0F172A" stroke-width="3" stroke-linecap="round" fill="none"/>
                                     
-                                    <!-- Fluffy Rosy Cheeks -->
                                     <circle cx="86" cy="115" r="8" fill="#F472B6" opacity="0.5"/>
                                     <circle cx="154" cy="115" r="8" fill="#F472B6" opacity="0.5"/>
 
-                                    <!-- Glass Visor Outer Dome -->
                                     <circle cx="120" cy="112" r="85" fill="url(#heroVisorGrad)" stroke="url(#heroVisorBorder)" stroke-width="4" opacity="0.88"/>
-                                    
-                                    <!-- Glass Reflection Curves -->
                                     <path d="M60 90 Q110 40 180 70" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
                                     <path d="M75 105 Q115 65 170 90" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
 
-                                    <!-- SVG Gradients -->
                                     <defs>
                                         <radialGradient id="heroMascotGlow" cx="50%" cy="50%" r="50%">
                                             <stop offset="0%" stop-color="#A855F7" stop-opacity="0.9"/>
@@ -379,6 +346,32 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTRACT ADDRESS (CA) INFORMATION BAR -->
+        <section class="py-6 relative z-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-panel rounded-3xl p-6 border-violet-500/40 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-violet-600/20 border border-violet-500/40 flex items-center justify-center text-violet-soft text-xl">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-extrabold text-gray-400 tracking-wider uppercase">CONTRACT ADDRESS (CA)</span>
+                            <span class="text-xs text-cyber font-medium">Solana Demo Network • Tax: 0%</span>
+                        </div>
+                    </div>
+
+                    <!-- CA Address Display & Copy Button -->
+                    <div class="flex items-center gap-3 bg-space-deep/90 px-4 py-3 rounded-2xl border border-space-border w-full md:w-auto overflow-x-auto">
+                        <span id="caText" class="text-xs sm:text-sm font-mono text-violet-soft tracking-wide select-all whitespace-nowrap">0xba2ae424d960c26247dd6c32edc70b295c744c43</span>
+                        <button onclick="copyContractAddress()" id="copyBtn" class="px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyber text-white font-extrabold text-xs tracking-wider shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shrink-0">
+                            <i id="copyIcon" class="fa-regular fa-copy"></i>
+                            <span id="copyBtnText">COPY CA</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -433,9 +426,7 @@
                     </p>
                 </div>
 
-                <!-- Feature Cards -->
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
                     <div class="glass-panel glass-panel-hover p-8 rounded-3xl relative overflow-hidden group">
                         <div class="w-14 h-14 rounded-2xl bg-violet-600/20 border border-violet-500/40 flex items-center justify-center text-violet-soft font-display text-2xl font-extrabold mb-6 group-hover:scale-110 transition-transform">
                             01
@@ -446,7 +437,6 @@
                         </p>
                     </div>
 
-                    <!-- Feature 2 -->
                     <div class="glass-panel glass-panel-hover p-8 rounded-3xl relative overflow-hidden group">
                         <div class="w-14 h-14 rounded-2xl bg-cyber/20 border border-cyber/40 flex items-center justify-center text-cyber font-display text-2xl font-extrabold mb-6 group-hover:scale-110 transition-transform">
                             02
@@ -457,7 +447,6 @@
                         </p>
                     </div>
 
-                    <!-- Feature 3 -->
                     <div class="glass-panel glass-panel-hover p-8 rounded-3xl relative overflow-hidden group">
                         <div class="w-14 h-14 rounded-2xl bg-pink-500/20 border border-pink-500/40 flex items-center justify-center text-pink-400 font-display text-2xl font-extrabold mb-6 group-hover:scale-110 transition-transform">
                             03
@@ -484,88 +473,63 @@
                 </div>
 
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
-                    <!-- Interactive Tokenomics SVG Donut Chart -->
                     <div class="lg:col-span-6 flex flex-col items-center justify-center">
-                        <div class="relative w-72 h-72 sm:w-88 sm:h-88">
-                            <!-- SVG Donut Chart -->
-                            <svg class="w-full h-full transform -rotate-90 filter drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]" viewBox="0 0 100 100">
-                                <!-- Background Donut Circle -->
-                                <circle cx="50" cy="50" r="40" stroke="#130C29" stroke-width="14" fill="none" />
-                                
-                                <!-- Segment 1: Community (50%) -->
-                                <circle cx="50" cy="50" r="40" stroke="#8B5CF6" stroke-width="14" fill="none"
-                                        stroke-dasharray="125.6 125.6" stroke-dashoffset="0" class="transition-all duration-700 hover:opacity-80"/>
-                                
-                                <!-- Segment 2: Liquidity (25%) -->
-                                <circle cx="50" cy="50" r="40" stroke="#38BDF8" stroke-width="14" fill="none"
-                                        stroke-dasharray="62.8 188.4" stroke-dashoffset="-125.6" class="transition-all duration-700 hover:opacity-80"/>
-                                
-                                <!-- Segment 3: Marketing (15%) -->
-                                <circle cx="50" cy="50" r="40" stroke="#A855F7" stroke-width="14" fill="none"
-                                        stroke-dasharray="37.68 213.52" stroke-dashoffset="-188.4" class="transition-all duration-700 hover:opacity-80"/>
-
-                                <!-- Segment 4: Development (10%) -->
-                                <circle cx="50" cy="50" r="40" stroke="#C4B5FD" stroke-width="14" fill="none"
-                                        stroke-dasharray="25.12 226.08" stroke-dashoffset="-226.08" class="transition-all duration-700 hover:opacity-80"/>
-                            </svg>
-
-                            <!-- Center Display Info -->
-                            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                                <span class="text-xs font-bold text-gray-400">TOTAL ALLOCATION</span>
-                                <span class="text-3xl font-display font-black text-white">100%</span>
-                                <span class="text-[10px] font-semibold text-cyber tracking-widest uppercase">$MPUP</span>
+                        <div class="glass-panel p-8 rounded-3xl border-violet-500/30 shadow-2xl w-full max-w-md flex flex-col items-center">
+                            <div class="relative w-56 h-56 sm:w-64 sm:h-64 flex items-center justify-center mb-6">
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" stroke="#130C29" stroke-width="14" fill="none" />
+                                    <circle cx="50" cy="50" r="40" stroke="#8B5CF6" stroke-width="14" fill="none" stroke-dasharray="125.6 251.2" stroke-dashoffset="0" />
+                                    <circle cx="50" cy="50" r="40" stroke="#38BDF8" stroke-width="14" fill="none" stroke-dasharray="62.8 251.2" stroke-dashoffset="-125.6" />
+                                    <circle cx="50" cy="50" r="40" stroke="#EC4899" stroke-width="14" fill="none" stroke-dasharray="37.6 251.2" stroke-dashoffset="-188.4" />
+                                    <circle cx="50" cy="50" r="40" stroke="#10B981" stroke-width="14" fill="none" stroke-dasharray="25.2 251.2" stroke-dashoffset="-226" />
+                                </svg>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                                    <span class="text-xs font-bold text-gray-400">TOTAL SUPPLY</span>
+                                    <span class="text-2xl font-display font-black text-white">1,000,000,000</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 w-full text-xs font-bold">
+                                <div class="flex items-center gap-2 p-2 rounded-xl bg-space-deep/60"><span class="w-3 h-3 rounded-full bg-violet-500"></span> Community (50%)</div>
+                                <div class="flex items-center gap-2 p-2 rounded-xl bg-space-deep/60"><span class="w-3 h-3 rounded-full bg-cyber"></span> Liquidity (25%)</div>
+                                <div class="flex items-center gap-2 p-2 rounded-xl bg-space-deep/60"><span class="w-3 h-3 rounded-full bg-pink-500"></span> Marketing (15%)</div>
+                                <div class="flex items-center gap-2 p-2 rounded-xl bg-space-deep/60"><span class="w-3 h-3 rounded-full bg-emerald-500"></span> Dev Team (10%)</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Allocation Breakdown Cards -->
-                    <div class="lg:col-span-6 space-y-4">
-                        <div class="glass-panel p-5 rounded-2xl flex items-center justify-between border-l-4 border-l-violet-500 glass-panel-hover">
-                            <div class="flex items-center gap-3.5">
-                                <div class="w-4 h-4 rounded-full bg-violet-500 shadow-md shadow-violet-500/50"></div>
-                                <span class="font-bold text-white text-base">Community & Ecosystem</span>
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="glass-panel p-8 rounded-3xl border-violet-500/30 shadow-2xl space-y-6">
+                            <h3 class="text-2xl font-display font-black text-white">Allocation Breakdown</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-sm font-bold mb-1">
+                                        <span class="text-gray-300">Community & Ecosystem</span>
+                                        <span class="text-violet-soft">50% (500,000,000)</span>
+                                    </div>
+                                    <div class="w-full h-2.5 rounded-full bg-space-deep overflow-hidden"><div class="w-1/2 h-full bg-violet-500 rounded-full"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm font-bold mb-1">
+                                        <span class="text-gray-300">DEX Liquidity Pool</span>
+                                        <span class="text-cyber">25% (250,000,000)</span>
+                                    </div>
+                                    <div class="w-full h-2.5 rounded-full bg-space-deep overflow-hidden"><div class="w-1/4 h-full bg-cyber rounded-full"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm font-bold mb-1">
+                                        <span class="text-gray-300">Marketing & CEX Listings</span>
+                                        <span class="text-pink-400">15% (150,000,000)</span>
+                                    </div>
+                                    <div class="w-full h-2.5 rounded-full bg-space-deep overflow-hidden"><div class="w-[15%] h-full bg-pink-500 rounded-full"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm font-bold mb-1">
+                                        <span class="text-gray-300">Development & Treasury</span>
+                                        <span class="text-emerald-400">10% (100,000,000)</span>
+                                    </div>
+                                    <div class="w-full h-2.5 rounded-full bg-space-deep overflow-hidden"><div class="w-[10%] h-full bg-emerald-500 rounded-full"></div></div>
+                                </div>
                             </div>
-                            <span class="font-display font-black text-2xl text-violet-soft">50%</span>
-                        </div>
-
-                        <div class="glass-panel p-5 rounded-2xl flex items-center justify-between border-l-4 border-l-cyber glass-panel-hover">
-                            <div class="flex items-center gap-3.5">
-                                <div class="w-4 h-4 rounded-full bg-cyber shadow-md shadow-cyber/50"></div>
-                                <span class="font-bold text-white text-base">Liquidity Pool</span>
-                            </div>
-                            <span class="font-display font-black text-2xl text-cyber">25%</span>
-                        </div>
-
-                        <div class="glass-panel p-5 rounded-2xl flex items-center justify-between border-l-4 border-l-violet-bright glass-panel-hover">
-                            <div class="flex items-center gap-3.5">
-                                <div class="w-4 h-4 rounded-full bg-violet-bright shadow-md shadow-violet-bright/50"></div>
-                                <span class="font-bold text-white text-base">Marketing & Growth</span>
-                            </div>
-                            <span class="font-display font-black text-2xl text-violet-bright">15%</span>
-                        </div>
-
-                        <div class="glass-panel p-5 rounded-2xl flex items-center justify-between border-l-4 border-l-violet-soft glass-panel-hover">
-                            <div class="flex items-center gap-3.5">
-                                <div class="w-4 h-4 rounded-full bg-violet-soft shadow-md shadow-violet-soft/50"></div>
-                                <span class="font-bold text-white text-base">Development Reserve</span>
-                            </div>
-                            <span class="font-display font-black text-2xl text-violet-soft">10%</span>
-                        </div>
-
-                        <!-- Copyable Contract Address Demo Bar -->
-                        <div class="mt-6 p-5 rounded-2xl glass-panel border-violet-500/40 space-y-2">
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-bold text-gray-400">CONTRACT ADDRESS (DEMO)</span>
-                                <span class="text-[10px] text-amber-400 font-extrabold tracking-wider uppercase">NOT DEPLOYED</span>
-                            </div>
-                            <div class="flex items-center justify-between gap-2 bg-space-deep/90 p-3.5 rounded-xl border border-space-border">
-                                <code id="contractCode" class="text-xs font-mono text-gray-300 truncate">DEMO-CONTRACT-ADDRESS-MOONPUP-WEBMAKE-DEMO</code>
-                                <button id="copyBtn" class="px-3.5 py-1.5 rounded-lg bg-violet-600/30 hover:bg-violet-600/50 text-xs font-bold text-violet-soft hover:text-white transition-colors flex items-center gap-1.5 shrink-0">
-                                    <i class="fa-regular fa-copy"></i>
-                                    <span id="copyText">Copy</span>
-                                </button>
-                            </div>
-                            <p class="text-[11px] text-gray-400 italic">Illustrative demo allocation. Not verified token data.</p>
                         </div>
                     </div>
                 </div>
@@ -576,176 +540,122 @@
         <section id="roadmap" class="py-24 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                    <span class="text-xs font-extrabold text-cyber uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-cyber/10 border border-cyber/20">
-                        MISSION PHASES
+                    <span class="text-xs font-extrabold text-pink-400 uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20">
+                        MISSION TIMELINE
                     </span>
                     <h2 class="text-3xl sm:text-5xl font-display font-black text-white">
-                        THE JOURNEY TO THE <span class="text-gradient-purple">MOON</span>
+                        THE JOURNEY TO <span class="text-gradient-purple">THE MOON</span>
                     </h2>
                 </div>
 
-                <!-- Visually Connected Timeline Grid -->
-                <div class="relative">
-                    <!-- Connecting Path Line for Desktop -->
-                    <div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 timeline-line -translate-y-1/2 z-0 opacity-40 rounded-full"></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-panel glass-panel-hover p-6 rounded-3xl relative">
+                        <span class="text-xs font-extrabold text-violet-soft uppercase tracking-wider block mb-2">PHASE 01</span>
+                        <h3 class="text-xl font-bold text-white mb-4">LIFTOFF</h3>
+                        <ul class="space-y-2.5 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Brand identity design</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Website launch by WEBMAKE</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Initial community formation</li>
+                        </ul>
+                    </div>
 
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-                        <!-- Phase 1 -->
-                        <div class="glass-panel p-6 rounded-3xl border-t-4 border-t-violet-500 space-y-4 glass-panel-hover">
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-extrabold text-violet-soft uppercase tracking-wider font-display">PHASE 01</span>
-                                <span class="px-2.5 py-0.5 rounded bg-violet-500/20 text-violet-soft text-[10px] font-bold">COMPLETED</span>
-                            </div>
-                            <h3 class="text-xl font-display font-black text-white">LIFTOFF</h3>
-                            <ul class="space-y-2 text-sm text-gray-300">
-                                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-violet-glow text-xs"></i> Brand Identity & Mascot</li>
-                                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-violet-glow text-xs"></i> Website Concept Launch</li>
-                                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-violet-glow text-xs"></i> Community Formation</li>
-                            </ul>
-                        </div>
+                    <div class="glass-panel glass-panel-hover p-6 rounded-3xl relative">
+                        <span class="text-xs font-extrabold text-cyber uppercase tracking-wider block mb-2">PHASE 02</span>
+                        <h3 class="text-xl font-bold text-white mb-4">ORBIT</h3>
+                        <ul class="space-y-2.5 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Community meme events</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Social media campaigns</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Token & Dex tracking setup</li>
+                        </ul>
+                    </div>
 
-                        <!-- Phase 2 -->
-                        <div class="glass-panel p-6 rounded-3xl border-t-4 border-t-cyber space-y-4 glass-panel-hover">
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-extrabold text-cyber uppercase tracking-wider font-display">PHASE 02</span>
-                                <span class="px-2.5 py-0.5 rounded bg-cyber/20 text-cyber text-[10px] font-bold">IN PROGRESS</span>
-                            </div>
-                            <h3 class="text-xl font-display font-black text-white">ORBIT</h3>
-                            <ul class="space-y-2 text-sm text-gray-300">
-                                <li class="flex items-center gap-2.5"><i class="fa-solid fa-arrow-right text-cyber text-xs"></i> Community Events</li>
-                                <li class="flex items-center gap-2.5"><i class="fa-solid fa-arrow-right text-cyber text-xs"></i> Meme Creation Contest</li>
-                                <li class="flex items-center gap-2.5"><i class="fa-solid fa-arrow-right text-cyber text-xs"></i> Social Campaigns</li>
-                            </ul>
-                        </div>
+                    <div class="glass-panel glass-panel-hover p-6 rounded-3xl relative">
+                        <span class="text-xs font-extrabold text-pink-400 uppercase tracking-wider block mb-2">PHASE 03</span>
+                        <h3 class="text-xl font-bold text-white mb-4">MOON MISSION</h3>
+                        <ul class="space-y-2.5 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-amber-400"></i> Community expansion</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-amber-400"></i> Creative KOL collaborations</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-amber-400"></i> Global marketing pushes</li>
+                        </ul>
+                    </div>
 
-                        <!-- Phase 3 -->
-                        <div class="glass-panel p-6 rounded-3xl border-t-4 border-t-violet-bright space-y-4 glass-panel-hover opacity-90">
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-extrabold text-violet-bright uppercase tracking-wider font-display">PHASE 03</span>
-                                <span class="px-2.5 py-0.5 rounded bg-space-card text-gray-400 text-[10px] font-bold">UPCOMING</span>
-                            </div>
-                            <h3 class="text-xl font-display font-black text-white">MOON MISSION</h3>
-                            <ul class="space-y-2 text-sm text-gray-400">
-                                <li class="flex items-center gap-2.5"><i class="fa-regular fa-circle text-xs"></i> Global Expansion</li>
-                                <li class="flex items-center gap-2.5"><i class="fa-regular fa-circle text-xs"></i> Creative Collaborations</li>
-                                <li class="flex items-center gap-2.5"><i class="fa-regular fa-circle text-xs"></i> Ecosystem Exploration</li>
-                            </ul>
-                        </div>
-
-                        <!-- Phase 4 -->
-                        <div class="glass-panel p-6 rounded-3xl border-t-4 border-t-pink-500 space-y-4 glass-panel-hover opacity-80">
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-extrabold text-pink-400 uppercase tracking-wider font-display">PHASE 04</span>
-                                <span class="px-2.5 py-0.5 rounded bg-space-card text-gray-400 text-[10px] font-bold">FUTURE</span>
-                            </div>
-                            <h3 class="text-xl font-display font-black text-white">BEYOND</h3>
-                            <ul class="space-y-2 text-sm text-gray-400">
-                                <li class="flex items-center gap-2.5"><i class="fa-regular fa-circle text-xs"></i> Long-term Initiatives</li>
-                                <li class="flex items-center gap-2.5"><i class="fa-regular fa-circle text-xs"></i> New Web3 Experiences</li>
-                                <li class="flex items-center gap-2.5"><i class="fa-regular fa-circle text-xs"></i> Ecosystem Governance</li>
-                            </ul>
-                        </div>
+                    <div class="glass-panel glass-panel-hover p-6 rounded-3xl relative">
+                        <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-wider block mb-2">PHASE 04</span>
+                        <h3 class="text-xl font-bold text-white mb-4">BEYOND</h3>
+                        <ul class="space-y-2.5 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-amber-400"></i> Long-term community DAO</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-amber-400"></i> New creative meme experiences</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-amber-400"></i> Future Web3 ecosystem utility</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- COMMUNITY SECTION -->
+        <!-- COMMUNITY SECTION (WITH OFFICIAL X & TELEGRAM LINKS) -->
         <section id="community" class="py-24 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-panel p-10 sm:p-16 rounded-3xl text-center space-y-8 border-violet-500/40 relative overflow-hidden shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-r from-violet-600/15 via-cyber/15 to-transparent pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="glass-panel rounded-3xl p-10 sm:p-16 border-violet-500/40 relative overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-r from-violet-600/10 via-cyber/15 to-purple-600/10 pointer-events-none"></div>
 
-                    <h2 class="text-3xl sm:text-5xl font-display font-black text-white max-w-2xl mx-auto">
-                        THE MOON IS BETTER <span class="text-gradient-purple">TOGETHER.</span>
-                    </h2>
+                    <div class="relative z-10 max-w-2xl mx-auto space-y-6">
+                        <span class="text-xs font-extrabold text-violet-soft uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-violet-600/20 border border-violet-500/30">
+                            THE CREW
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-display font-black text-white">
+                            THE MOON IS BETTER <span class="text-gradient-cyber">TOGETHER.</span>
+                        </h2>
+                        <p class="text-gray-300 text-base sm:text-lg">
+                            Every great space journey starts with a passionate community. Join us on Telegram and follow our updates on X.
+                        </p>
 
-                    <p class="text-gray-300 font-medium text-base sm:text-lg max-w-xl mx-auto">
-                        Every great journey starts with an active community. Join our social channels to get involved in the MOONPUP experiment.
-                    </p>
-
-                    <div class="flex flex-wrap items-center justify-center gap-5 pt-4">
-                        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-2xl bg-[#229ED9] text-white font-extrabold text-base shadow-xl shadow-sky-500/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5">
-                            <i class="fa-brands fa-telegram text-xl"></i>
-                            <span>JOIN TELEGRAM</span>
-                        </a>
-                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-2xl bg-black border border-space-border text-white font-extrabold text-base hover:border-violet-500 hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5">
-                            <i class="fa-brands fa-x-twitter text-xl"></i>
-                            <span>FOLLOW ON X</span>
-                        </a>
+                        <!-- Official Social Links -->
+                        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                            <a href="https://t.me/sheji113" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-cyber text-white font-extrabold text-base shadow-lg shadow-violet-600/40 hover:scale-105 active:scale-95 transition-all flex items-center gap-3">
+                                <i class="fa-brands fa-telegram text-xl"></i>
+                                <span>JOIN OUR TELEGRAM</span>
+                            </a>
+                            <a href="https://x.com/webmake88" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-2xl glass-panel hover:bg-space-card text-white font-extrabold text-base border-violet-500/40 hover:border-violet-400 hover:scale-105 active:scale-95 transition-all flex items-center gap-3">
+                                <i class="fa-brands fa-x-twitter text-xl"></i>
+                                <span>FOLLOW US ON X</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- WEBMAKE BRAND SHOWCASE SECTION -->
-        <section class="py-24 relative bg-gradient-to-b from-transparent via-[#0d0722] to-transparent">
+        <!-- WEBMAKE STUDIO SHOWCASE SECTION -->
+        <section class="py-24 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-panel p-8 sm:p-14 rounded-3xl border-2 border-violet-500/40 relative overflow-hidden shadow-2xl">
-                    <div class="absolute top-0 right-0 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl pointer-events-none"></div>
-
-                    <div class="grid lg:grid-cols-12 gap-12 items-center relative z-10">
-                        <div class="lg:col-span-7 space-y-6">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-violet-500/20 border border-violet-400/30 text-xs font-bold text-violet-soft">
-                                <i class="fa-solid fa-code text-cyber"></i> BEHIND THE EXPERIENCE
-                            </div>
-
-                            <h2 class="text-3xl sm:text-5xl font-display font-black text-white leading-tight">
+                <div class="glass-panel rounded-3xl p-8 sm:p-12 border-violet-500/40 shadow-2xl relative overflow-hidden">
+                    <div class="grid lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8 space-y-6">
+                            <span class="text-xs font-extrabold text-violet-soft uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-violet-950/80 border border-violet-500/40">
+                                BEHIND THE EXPERIENCE
+                            </span>
+                            <h2 class="text-3xl sm:text-4xl font-display font-black text-white">
                                 BUILT TO STAND OUT. <br>
-                                <span class="text-gradient-webmake">DESIGNED BY WEBMAKE.</span>
+                                <span class="text-gradient-purple">DESIGNED BY WEBMAKE.</span>
                             </h2>
-
-                            <p class="text-gray-300 font-medium text-base sm:text-lg leading-relaxed">
-                                MOONPUP is a creative portfolio demonstration showcasing the design and development capabilities of <strong class="text-white">WEBMAKE</strong>, a studio specializing in premium Meme Coin and Web3 websites.
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                                MOONPUP is an official portfolio showcase project demonstrating the world-class design and development capabilities of WEBMAKE — Meme Coin & Web3 Website Studio.
                             </p>
-
-                            <!-- Service Highlights -->
-                            <div class="grid sm:grid-cols-3 gap-4 pt-2">
-                                <div class="p-4 rounded-xl bg-space-deep/70 border border-space-border">
-                                    <i class="fa-solid fa-palette text-violet-glow text-lg mb-2"></i>
-                                    <h4 class="font-bold text-sm text-white mb-1">Creative Design</h4>
-                                    <p class="text-xs text-gray-400">Distinctive visual identities built for Web3.</p>
-                                </div>
-                                <div class="p-4 rounded-xl bg-space-deep/70 border border-space-border">
-                                    <i class="fa-solid fa-cubes text-cyber text-lg mb-2"></i>
-                                    <h4 class="font-bold text-sm text-white mb-1">Web3 Landings</h4>
-                                    <p class="text-xs text-gray-400">Tokenomics, roadmaps, and community hubs.</p>
-                                </div>
-                                <div class="p-4 rounded-xl bg-space-deep/70 border border-space-border">
-                                    <i class="fa-solid fa-rocket text-pink-400 text-lg mb-2"></i>
-                                    <h4 class="font-bold text-sm text-white mb-1">Brand Launch</h4>
-                                    <p class="text-xs text-gray-400">Fast delivery with modern responsive code.</p>
-                                </div>
-                            </div>
-
-                            <!-- CTAs -->
-                            <div class="flex flex-wrap items-center gap-4 pt-4">
-                                <a href="https://webmake.store" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-2xl bg-white text-space-deep font-extrabold text-base shadow-xl hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5">
-                                    <span>BUILD YOUR PROJECT WITH US</span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            <div class="flex flex-wrap items-center gap-4 pt-2">
+                                <a href="https://webmake.store" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-cyber text-white font-extrabold text-sm shadow-lg hover:scale-105 transition-all">
+                                    BUILD YOUR PROJECT WITH US
                                 </a>
-                                <a href="https://webmake.store" target="_blank" rel="noopener noreferrer" class="px-6 py-4 rounded-2xl glass-panel text-white font-bold text-base hover:bg-space-card hover:scale-105 active:scale-95 transition-all">
-                                    VISIT WEBMAKE.STORE
+                                <a href="https://webmake.store" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl glass-panel text-violet-soft font-bold text-sm border-violet-500/40 hover:text-white transition-all">
+                                    VISIT WEBMAKE ↗
                                 </a>
                             </div>
                         </div>
-
-                        <!-- WEBMAKE Brand Symbol Graphic -->
-                        <div class="lg:col-span-5 flex justify-center">
-                            <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-tr from-violet-900/60 to-space-card p-8 border border-violet-500/40 shadow-2xl flex flex-col items-center justify-center text-center relative group">
-                                <!-- Studio Logo SVG -->
-                                <svg class="w-36 h-36 filter drop-shadow-[0_0_25px_rgba(139,92,246,0.65)] group-hover:scale-110 transition-transform duration-500" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 25 L35 75 L50 45 L65 75 L85 25" stroke="url(#webmakeGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <defs>
-                                        <linearGradient id="webmakeGrad" x1="0" y1="0" x2="100" y2="100">
-                                            <stop offset="0%" stop-color="#FFFFFF"/>
-                                            <stop offset="50%" stop-color="#C4B5FD"/>
-                                            <stop offset="100%" stop-color="#8B5CF6"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                <span class="font-display font-black text-2xl tracking-widest text-white mt-4">WEBMAKE</span>
-                                <span class="text-xs font-bold text-cyber tracking-wider uppercase mt-1">LAUNCH. BRAND. GROW.</span>
+                        <div class="lg:col-span-4 flex justify-center">
+                            <div class="w-36 h-36 rounded-3xl bg-gradient-to-tr from-violet-600 via-violet-500 to-cyber p-1 shadow-2xl animate-float">
+                                <div class="w-full h-full bg-space-deep rounded-[22px] flex flex-col items-center justify-center text-center p-4">
+                                    <span class="text-3xl font-black text-white font-display">W</span>
+                                    <span class="text-[10px] font-bold text-violet-soft tracking-widest mt-1">WEBMAKE</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -755,172 +665,116 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <footer class="relative z-10 border-t border-space-border bg-space-deep py-16">
+    <!-- FOOTER SECTION -->
+    <footer class="relative z-10 bg-space-deep border-t border-space-border py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 pb-12 border-b border-space-border/60">
-                <!-- Left: MOONPUP Identity -->
-                <div class="space-y-4">
+            <div class="grid md:grid-cols-12 gap-8 pb-12 border-b border-space-border/60">
+                <div class="md:col-span-6 space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-violet-600 flex items-center justify-center text-white font-bold text-lg">🐶</div>
-                        <span class="font-display font-black text-2xl text-white">MOONPUP</span>
+                        <div class="w-8 h-8 rounded-lg bg-violet-600 flex items-center justify-center font-bold text-white">🐶</div>
+                        <span class="font-display font-black text-lg text-white">MOONPUP</span>
                     </div>
                     <p class="text-sm text-gray-400 max-w-sm">
-                        "One Small Bark. One Giant Leap."
+                        "One Small Bark. One Giant Leap." A community-powered meme experiment.
                     </p>
-                    <div class="flex items-center gap-4 text-gray-400 text-lg">
-                        <a href="https://x.com" target="_blank" class="hover:text-cyber transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://telegram.org" target="_blank" class="hover:text-cyber transition-colors"><i class="fa-brands fa-telegram"></i></a>
-                        <a href="#home" class="hover:text-cyber transition-colors"><i class="fa-solid fa-globe"></i></a>
+                    <div class="flex items-center gap-3 text-gray-400">
+                        <a href="https://t.me/sheji113" target="_blank" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center hover:text-white hover:border-violet-500 transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://x.com/webmake88" target="_blank" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center hover:text-white hover:border-violet-500 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
 
-                <!-- Right: WEBMAKE Signature Credit -->
-                <div class="md:text-right space-y-3">
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">DESIGNED & DEVELOPED BY</span>
-                    <div>
-                        <a href="https://webmake.store" target="_blank" rel="noopener noreferrer" class="text-2xl font-display font-black text-white hover:text-violet-soft transition-colors inline-flex items-center gap-2">
-                            WEBMAKE STUDIO
-                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-violet-glow"></i>
-                        </a>
-                    </div>
-                    <p class="text-xs font-semibold text-cyber">Meme Coin & Web3 Website Studio</p>
-                    <p class="text-xs font-bold text-gray-400 tracking-wider">LAUNCH. BRAND. GROW.</p>
+                <div class="md:col-span-6 md:text-right space-y-2">
+                    <span class="text-xs font-extrabold text-violet-soft uppercase tracking-widest block">DESIGNED & DEVELOPED BY</span>
+                    <a href="https://webmake.store" target="_blank" rel="noopener noreferrer" class="text-2xl font-display font-black text-white hover:text-violet-soft transition-colors inline-block">
+                        WEBMAKE ↗
+                    </a>
+                    <p class="text-xs text-gray-400 font-medium">Meme Coin & Web3 Website Studio • LAUNCH. BRAND. GROW.</p>
                 </div>
             </div>
 
-            <!-- Bottom Disclaimer & Copyright -->
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-                <p>© 2026 MOONPUP Concept Project. All rights reserved.</p>
-                <p class="max-w-md text-center sm:text-right text-gray-400">
-                    MOONPUP is a fictional portfolio demonstration created by WEBMAKE for website design purposes. This website does not represent a live token offering.
-                </p>
+            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <div>© 2026 MOONPUP Concept Project. All rights reserved.</div>
+                <div class="max-w-lg text-center md:text-right">
+                    MOONPUP is a fictional portfolio demonstration created by WEBMAKE for website design purposes. This website does not represent a live token offering or investment opportunity.
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- FLOATING WEBMAKE BADGE -->
-    <a href="https://webmake.store" target="_blank" rel="noopener noreferrer" 
-       class="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-full glass-panel border-violet-500/40 text-xs font-bold text-white shadow-2xl hover:scale-105 hover:border-violet-400 transition-all flex items-center gap-2 group">
-        <span class="w-5 h-5 rounded-full bg-violet-600 flex items-center justify-center text-[10px] font-black">W</span>
-        <span>WEBSITE BY <strong class="text-violet-soft group-hover:underline">WEBMAKE</strong></span>
-    </a>
-
-    <!-- BACK TO TOP BUTTON -->
-    <button id="backToTop" class="fixed bottom-6 left-6 z-40 p-3.5 rounded-full glass-panel border-space-border text-gray-300 hover:text-white hover:border-violet-500 transition-all opacity-0 pointer-events-none" aria-label="Back to Top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
-    <!-- INLINE JAVASCRIPT -->
+    <!-- JavaScript for Particle Canvas & Copy Function -->
     <script>
-        // Starfield Canvas Animation
-        (function initCanvas() {
-            const canvas = document.getElementById('particleCanvas');
-            const ctx = canvas.getContext('2d');
-            let width = canvas.width = window.innerWidth;
-            let height = canvas.height = window.innerHeight;
-
-            window.addEventListener('resize', () => {
-                width = canvas.width = window.innerWidth;
-                height = canvas.height = window.innerHeight;
-            });
-
-            const particles = [];
-            const particleCount = Math.min(Math.floor(width / 9), 110);
-
-            for (let i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    radius: Math.random() * 1.8 + 0.4,
-                    alpha: Math.random() * 0.8 + 0.2,
-                    speedY: Math.random() * 0.35 + 0.1,
-                    speedX: (Math.random() - 0.5) * 0.2
-                });
-            }
-
-            function animate() {
-                ctx.clearRect(0, 0, width, height);
-
-                particles.forEach(p => {
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(196, 181, 253, ${p.alpha})`;
-                    ctx.fill();
-
-                    p.y -= p.speedY;
-                    p.x += p.speedX;
-
-                    if (p.y < 0) {
-                        p.y = height;
-                        p.x = Math.random() * width;
-                    }
-                });
-
-                requestAnimationFrame(animate);
-            }
-
-            animate();
-        })();
-
-        // Copy Contract Address Functionality
-        const copyBtn = document.getElementById('copyBtn');
-        const copyText = document.getElementById('copyText');
-        const contractCode = document.getElementById('contractCode');
-
-        if (copyBtn) {
-            copyBtn.addEventListener('click', () => {
-                const textToCopy = contractCode.innerText;
+        // Copy Contract Address Function
+        function copyContractAddress() {
+            const caText = document.getElementById('caText').innerText;
+            navigator.clipboard.writeText(caText).then(() => {
+                const btnText = document.getElementById('copyBtnText');
+                const icon = document.getElementById('copyIcon');
                 
-                const el = document.createElement('textarea');
-                el.value = textToCopy;
-                document.body.appendChild(el);
-                el.select();
-                document.execCommand('copy');
-                document.body.removeChild(el);
-
-                copyText.innerText = 'Copied!';
-                copyBtn.classList.add('bg-emerald-600/40', 'text-emerald-300');
+                btnText.innerText = 'COPIED!';
+                icon.className = 'fa-solid fa-check';
                 
                 setTimeout(() => {
-                    copyText.innerText = 'Copy';
-                    copyBtn.classList.remove('bg-emerald-600/40', 'text-emerald-300');
-                }, 2000);
+                    btnText.innerText = 'COPY CA';
+                    icon.className = 'fa-regular fa-copy';
+                }, 2500);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
             });
         }
 
-        // Mobile Menu Drawer Handler
+        // Mobile Menu Drawer Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileDrawer = document.getElementById('mobileDrawer');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
         if (mobileMenuBtn && mobileDrawer) {
             mobileMenuBtn.addEventListener('click', () => {
                 mobileDrawer.classList.toggle('hidden');
             });
+        }
 
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileDrawer.classList.add('hidden');
-                });
+        // Interactive Starfield Background Canvas
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const stars = [];
+        const starCount = Math.floor((window.innerWidth * window.innerHeight) / 9000);
+
+        for (let i = 0; i < starCount; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 1.5 + 0.3,
+                alpha: Math.random() * 0.8 + 0.2,
+                speed: Math.random() * 0.15 + 0.05
             });
         }
 
-        // Scroll Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 450) {
-                backToTop.classList.remove('opacity-0', 'pointer-events-none');
-            } else {
-                backToTop.classList.add('opacity-0', 'pointer-events-none');
-            }
-        });
+        function animateStarfield() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#ffffff';
+            
+            stars.forEach(star => {
+                ctx.globalAlpha = star.alpha;
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fill();
 
-        if (backToTop) {
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                star.y -= star.speed;
+                if (star.y < 0) {
+                    star.y = canvas.height;
+                    star.x = Math.random() * canvas.width;
+                }
             });
+
+            requestAnimationFrame(animateStarfield);
         }
+        animateStarfield();
     </script>
 </body>
 </html>
